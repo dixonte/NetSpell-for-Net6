@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows7.0</TargetFramework>
+		<OutputType>Library</OutputType>
+		<ProjectGuid>{A426EE0B-E52E-4D74-AF24-06797142D7B2}</ProjectGuid>
+		<AssemblyName>NetSpell.SpellChecker</AssemblyName>
+		<RootNamespace>NetSpell.SpellChecker</RootNamespace>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+		<UseWindowsForms>true</UseWindowsForms>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>Spell.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<EmbeddedResource Include="Dictionary\Dictionary.bmp" />
+		<EmbeddedResource Include="Dictionary\WordDictionary.resx">
+			<DependentUpon>WordDictionary.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Forms\OptionsForm.resx">
+			<DependentUpon>OptionsForm.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Forms\SuggestionForm.resx">
+			<DependentUpon>SuggestionForm.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Spelling.bmp" />
+		<EmbeddedResource Include="Spelling.resx">
+			<DependentUpon>Spelling.cs</DependentUpon>
+		</EmbeddedResource>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
+	</ItemGroup>
+
+</Project>

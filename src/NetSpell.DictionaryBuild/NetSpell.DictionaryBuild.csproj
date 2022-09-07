@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
+		<ProjectGuid>{1A1420D4-99BA-4755-9D54-F920BA435D64}</ProjectGuid>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ApplicationIcon>BOOK01A.ICO</ApplicationIcon>
+		<AssemblyName>NetSpell.DictionaryBuild</AssemblyName>
+		<RootNamespace>NetSpell.DictionaryBuild</RootNamespace>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+		<UseWindowsForms>True</UseWindowsForms>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\NetSpell.SpellChecker\NetSpell.SpellChecker.csproj">
+			<Name>NetSpell.SpellChecker</Name>
+			<Project>{A426EE0B-E52E-4D74-AF24-06797142D7B2}</Project>
+			<Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+		</ProjectReference>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Content Include="BOOK01A.ICO" />
+		<EmbeddedResource Include="AboutForm.resx">
+			<DependentUpon>AboutForm.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="DictionaryForm.resx">
+			<DependentUpon>DictionaryForm.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="MainForm.resx">
+			<DependentUpon>MainForm.cs</DependentUpon>
+		</EmbeddedResource>
+		<None Include="app.config" />
+	</ItemGroup>
+
+</Project>
